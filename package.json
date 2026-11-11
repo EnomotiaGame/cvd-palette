@@ -1,0 +1,58 @@
+{
+  "name": "cvd-palette",
+  "version": "0.1.0",
+  "description": "Check that a colour palette can be told apart with colour-vision deficiency, fix it by moving colours as little as possible, and ship per-mode palettes as CSS.",
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "color-blind",
+    "colour-blind",
+    "cvd",
+    "palette",
+    "ciede2000",
+    "color",
+    "data-visualization",
+    "wcag"
+  ],
+  "homepage": "https://github.com/EnomotiaGame/cvd-palette#readme",
+  "bugs": "https://github.com/EnomotiaGame/cvd-palette/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnomotiaGame/cvd-palette.git"
+  },
+  "license": "MIT",
+  "author": "TRUETHINKS LTD (https://enomotia.net)",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "cvd-palette": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}

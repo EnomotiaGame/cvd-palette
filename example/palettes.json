@@ -1,0 +1,16 @@
+{
+  "sets": {
+    "chart": ["sales", "costs", "profit", "forecast"],
+    "status": ["ok", "warn", "error"]
+  },
+  "tokens": {
+    "sales": {"css": ["--chart-sales"], "default": "#2ca02c", "protan": "#30a52b", "tritan": "#1ca527"},
+    "costs": {"css": ["--chart-costs"], "default": "#d62728", "protan": "#e44645", "deutan": "#b51318", "tritan": "#b61a1f"},
+    "profit": {"css": ["--chart-profit"], "default": "#1f77b4"},
+    "forecast": {"css": ["--chart-forecast"], "default": "#ff7f0e", "protan": "#b52202"},
+    "ok": {"css": ["--status-ok"], "default": "#2e7d32", "protan": "#3c8038", "deutan": "#135400", "tritan": "#308238"},
+    "warn": {"css": ["--status-warn"], "default": "#a65f00", "protan": "#733b00", "tritan": "#764300"},
+    "error": {"css": ["--status-error"], "default": "#c62828", "protan": "#b2253c", "deutan": "#b2214a", "tritan": "#bf2522"}
+  },
+  "check": {"text": {"names": ["ok", "warn", "error"], "background": "#ffffff"}, "fixed": ["profit"]}
+}
